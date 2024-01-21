@@ -3,8 +3,27 @@ spring:
         url: "jdbc:mysql://127.0.0.1:3306/fims"
         username: "root"
         password: "123456"
+    jpa:
+        show-sql: true # 默认false，在日志里显示执行的sql语句
+        database: mysql
+        hibernate:
+            ddl-auto: update
+            naming:
+                #指定jpa的自动表生成策略，驼峰自动映射为下划线格式7
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
     devtools:
         restart:
             enabled: true  # 设置开启热部署
             additional-paths: src/main/java # 重启目录
             exclude: WEB-INF/**
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
+
+springfox:
+    documentation:
+        swagger-ui:
+            enabled: true
+
+server:
+    port: 8080
