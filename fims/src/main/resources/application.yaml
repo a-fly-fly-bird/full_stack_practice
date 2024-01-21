@@ -1,8 +1,18 @@
+server:
+    port: 8080
+
 spring:
     datasource:
         url: "jdbc:mysql://127.0.0.1:3306/fims"
         username: "root"
         password: "123456"
+        driverClassName: com.mysql.cj.jdbc.Driver
+        hikari:
+            minimum-idle: 10
+            maximum-pool-size: 20
+            idle-timeout: 500000
+            max-lifetime: 540000
+            connection-timeout: 60000
     jpa:
         show-sql: true # 默认false，在日志里显示执行的sql语句
         database: mysql
@@ -24,6 +34,3 @@ springfox:
     documentation:
         swagger-ui:
             enabled: true
-
-server:
-    port: 8080
