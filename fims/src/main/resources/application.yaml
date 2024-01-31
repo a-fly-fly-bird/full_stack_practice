@@ -28,9 +28,14 @@ spring:
             exclude: WEB-INF/**
     mvc:
         pathmatch:
-            matching-strategy: ant_path_matcher
+            matching-strategy: ANT_PATH_MATCHER
 
 springfox:
     documentation:
         swagger-ui:
             enabled: true
+
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    configuration:
+        map-underscore-to-camel-case: true

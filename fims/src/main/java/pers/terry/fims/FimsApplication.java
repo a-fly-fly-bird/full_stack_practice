@@ -1,12 +1,12 @@
 package pers.terry.fims;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import springfox.documentation.oas.annotations.EnableOpenApi;
 
 @EnableJpaRepositories(basePackages = "pers.terry.fims.repository")
+@MapperScan(basePackages = "pers.terry.fims.mapper")
 @SpringBootApplication
 public class FimsApplication {
 
