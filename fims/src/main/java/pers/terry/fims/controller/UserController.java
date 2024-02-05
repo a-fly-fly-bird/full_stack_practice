@@ -1,15 +1,16 @@
 package pers.terry.fims.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import pers.terry.fims.entity.UserEntity;
 import pers.terry.fims.service.UserService;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")

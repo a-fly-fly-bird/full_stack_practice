@@ -1,6 +1,7 @@
 package pers.terry.fims.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+
 import pers.terry.fims.entity.UserEntity;
 
 @Mapper
