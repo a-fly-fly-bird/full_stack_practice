@@ -21,8 +21,8 @@ public class UserController {
 
     @GetMapping("/all")
     @ApiOperation("获取用户")
-    public Optional<UserEntity> getUserEntity(){
-        System.out.println("hello" +  this.userService.getFirstUser().toString());
+    public Optional<UserEntity> getUserEntity() {
+        System.out.println("hello" + this.userService.getFirstUser().toString());
         return this.userService.getFirstUser();
     }
 }
